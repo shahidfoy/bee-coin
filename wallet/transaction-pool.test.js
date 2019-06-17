@@ -33,6 +33,11 @@ describe('TransactionPool', () => {
         expect(tp.transactions.length).toEqual(2);
     });
 
+    it('clears transactions', () => {
+        tp.clear();
+        expect(tp.transactions).toEqual([]);
+    });
+
     describe('mixing valid and corrupt transactions', () => {
         let validTransactions;
     
