@@ -37,15 +37,15 @@ class Transaction {
     }
 
     return Transaction.transactionWithOutputs(senderWallet, [
-      { amount: senderWallet.balance - amount, address: senderWallet.publicKey },
-      { amount, address: recipient }
+        { amount: senderWallet.balance - amount, address: senderWallet.publicKey },
+        { amount, address: recipient }
     ]);
   }
 
   static rewardTransaction(minerWallet, blockchainWallet) {
-    return Transaction.transactionWithOutputs(blockchainWallet, [{
-      amount: MINING_REWARD, address: minerWallet.publicKey
-    }]);
+    return Transaction.transactionWithOutputs(blockchainWallet, [
+        { amount: MINING_REWARD, address: minerWallet.publicKey}
+    ]);
   }
 
   static signTransaction(transaction, senderWallet) {
