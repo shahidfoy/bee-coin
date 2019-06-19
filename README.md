@@ -1,3 +1,14 @@
+# install
+
+nodejs: https://nodejs.org/
+run
+
+```
+npm install
+```
+
+to install package libraries
+
 create a local server using:
 
 ```
